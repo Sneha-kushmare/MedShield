@@ -14,8 +14,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Database.initialize();
 
+        int port = Integer.parseInt(
+                System.getenv().getOrDefault("PORT", "8080"));
+
         HttpServer server = HttpServer.create(
-                new InetSocketAddress(8080), 0);
+                new InetSocketAddress("0.0.0.0", port), 0);
 
         server.createContext("/api/register", AuthHandler::register);
         server.createContext("/api/login", AuthHandler::login);
@@ -89,6 +92,6 @@ public class Main {
         server.start();
 
         System.out.println(
-                "MedShield running at http://localhost:8080");
+                "MedShield running on port " + port);
     }
 }

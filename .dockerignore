@@ -1,0 +1,11 @@
+.git
+.github
+.vscode
+target/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.log
+.env
+.env.*
