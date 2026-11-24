@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Drug Interaction Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>🛡️ MedShield</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="medical-records.html">📋 Medical Records</a>
+            <a href="prescription.html">💊 Prescriptions</a>
+            <a href="interaction.html" class="active">⚠️ Drug Interaction</a>
+            <a href="reminders.html">⏰ Medicine Reminders</a>
+        </nav>
+
+        <a href="/api/logout" class="logout">🚪 Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Drug Interaction Checker</h1>
+                <p>Check known interactions between two medicines.</p>
+            </div>
+        </header>
+
+        <section class="record-form interaction-form">
+
+            <h2>⚠️ Check Medicine Interaction</h2>
+
+            <p class="description">
+                Enter two medicine names to check the interaction database.
+            </p>
+
+            <form id="interactionForm">
+
+                <div class="form-group">
+                    <label>First Medicine</label>
+                    <input type="text" id="medicine1"
+                        placeholder="Enter first medicine name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Second Medicine</label>
+                    <input type="text" id="medicine2"
+                        placeholder="Enter second medicine name" required>
+                </div>
+
+                <button type="submit">Check Interaction</button>
+
+            </form>
+
+            <div id="interactionResult" class="interaction-result"></div>
+
+        </section>
+
+        <section class="record-list">
+            <h2>How It Works</h2>
+
+            <p>1. Enter two medicine names.</p>
+            <p>2. System checks its interaction database.</p>
+            <p>3. System displays the matching information, if available.</p>
+
+        </section>
+
+        <div class="medical-warning">
+            <strong>Medical Safety Notice:</strong>
+            This prototype is for educational demonstration only.
+            No interaction result does not mean that the combination is safe.
+            Always consult a qualified healthcare professional.
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

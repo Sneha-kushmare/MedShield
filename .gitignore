@@ -1,0 +1,15 @@
+target/
+*.class
+*.log
+
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+.env
+.env.*
+!.env.example
+
+.idea/

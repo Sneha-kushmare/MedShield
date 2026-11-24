@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+
+            <h1>🛡️ MedShield</h1>
+            <p class="subtitle">Create Your Account</p>
+
+            <h2>New User Registration</h2>
+            <p class="description">Register to manage your medical records.</p>
+
+            <form id="registerForm">
+
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+                <label>Username</label>
+                <input type="text" id="newUsername" placeholder="Create username" required>
+
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="newPassword" placeholder="Create password" minlength="6" required>
+
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <p class="register-text">
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

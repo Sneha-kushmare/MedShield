@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Medical Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>🛡️ MedShield</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="medical-records.html" class="active">📋 Medical Records</a>
+            <a href="prescription.html">💊 Prescriptions</a>
+            <a href="interaction.html">⚠️ Drug Interaction</a>
+            <a href="reminders.html">⏰ Medicine Reminders</a>
+        </nav>
+
+        <a href="/api/logout" class="logout">🚪 Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Medical Records</h1>
+                <p>Manage your medical information.</p>
+            </div>
+        </header>
+
+        <section class="record-form">
+
+            <h2>➕ Add Medical Information</h2>
+
+            <form id="medicalForm">
+
+                <div class="form-group">
+                    <label>Patient Name</label>
+                    <input type="text" id="patientName"
+                           placeholder="Enter patient name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="patientAge"
+                           placeholder="Enter age" min="1" max="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Blood Group</label>
+                    <select id="bloodGroup">
+                        <option value="">Select blood group</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Known Allergies</label>
+                    <textarea id="allergies"
+                        placeholder="Enter known allergies (if any)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Medical History</label>
+                    <textarea id="medicalHistory"
+                        placeholder="Enter medical history"></textarea>
+                </div>
+
+                <button type="submit">Save Medical Record</button>
+
+            </form>
+
+        </section>
+
+        <section class="record-list">
+            <h2>Saved Medical Records</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Age</th>
+                        <th>Blood Group</th>
+                        <th>Allergies</th>
+                    </tr>
+                </thead>
+
+                <tbody id="recordTable">
+                    <tr>
+                        <td colspan="4">No records available yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

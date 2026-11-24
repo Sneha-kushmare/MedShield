@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>🛡️ MedShield</h2>
+
+        <nav>
+            <a href="dashboard.html" class="active">🏠 Dashboard</a>
+            <a href="medical-records.html">📋 Medical Records</a>
+            <a href="prescription.html">💊 Prescriptions</a>
+            <a href="interaction.html">⚠️ Drug Interaction</a>
+            <a href="reminders.html">⏰ Medicine Reminders</a>
+        </nav>
+
+        <a href="/api/logout" class="logout">🚪 Logout</a>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to your MedShield medical management system.</p>
+            </div>
+
+            <div class="user-profile" id="userProfile">
+    👤 User
+</div>
+        </header>
+
+
+        <!-- Summary Cards -->
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Medicines</h3>
+                <h2 id="totalMedicines">00</h2>
+                <p>Medicines in your records</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Prescriptions</h3>
+                <h2 id="totalPrescriptions">00</h2>
+                <p>Saved prescriptions</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Reminders</h3>
+                <h2 id="activeReminders">00</h2>
+                <p>Upcoming reminders</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Interaction Checks</h3>
+                <h2>Demo</h2>
+                <p>Limited demo interaction database</p>
+            </div>
+
+        </section>
+
+
+        <!-- Main Features -->
+        <section class="features-section">
+
+            <h2>MedShield Services</h2>
+
+            <div class="features-container">
+
+                <div class="feature-card">
+                    <h3>📋 Medical Records</h3>
+                    <p>Manage your personal medical information.</p>
+                    <a href="medical-records.html">Open Records →</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💊 Prescription Management</h3>
+                    <p>Add and manage your medicine prescriptions.</p>
+                    <a href="prescription.html">Manage Prescriptions →</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>⚠️ Drug Interaction Checker</h3>
+                    <p>Check known interactions between medicines.</p>
+                    <a href="interaction.html">Check Interaction →</a>
+                </div>
+
+                <div class="feature-card">
+                    <h3>⏰ Medicine Reminders</h3>
+                    <p>Schedule and manage medicine reminders.</p>
+                    <a href="reminders.html">Set Reminder →</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>MedShield © 2026 | Offline Drug Interaction and Prescription Verification System</p>
+        </footer>
+
+    </main>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

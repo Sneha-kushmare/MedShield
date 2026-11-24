@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Prescriptions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>🛡️ MedShield</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="medical-records.html">📋 Medical Records</a>
+            <a href="prescription.html" class="active">💊 Prescriptions</a>
+            <a href="interaction.html">⚠️ Drug Interaction</a>
+            <a href="reminders.html">⏰ Medicine Reminders</a>
+        </nav>
+
+        <a href="/api/logout" class="logout">🚪 Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Prescription Management</h1>
+                <p>Add and manage medicine prescriptions.</p>
+            </div>
+        </header>
+
+        <section class="record-form">
+
+            <h2>➕ Add New Prescription</h2>
+
+            <form id="prescriptionForm">
+
+                <div class="form-group">
+                    <label>Patient Name</label>
+                    <input type="text" id="presPatient"
+                        placeholder="Enter patient name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Doctor's Name</label>
+                    <input type="text" id="doctorName"
+                        placeholder="Enter doctor's name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Medicine Name</label>
+                    <input type="text" id="medicineName"
+                        placeholder="Enter medicine name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Dosage</label>
+                    <input type="text" id="dosage"
+                        placeholder="As written on prescription" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Frequency</label>
+                    <select id="frequency" required>
+                        <option value="">Select frequency</option>
+                        <option>Once a day</option>
+                        <option>Twice a day</option>
+                        <option>Three times a day</option>
+                        <option>As prescribed</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="date" id="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>End Date</label>
+                    <input type="date" id="endDate" required>
+                </div>
+
+                <button type="submit">Save Prescription</button>
+
+            </form>
+
+        </section>
+
+        <section class="record-list">
+
+            <h2>Saved Prescriptions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                        <th>Frequency</th>
+                        <th>Doctor</th>
+                    </tr>
+                </thead>
+
+                <tbody id="prescriptionTable">
+                    <tr>
+                        <td colspan="5">No prescriptions available yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

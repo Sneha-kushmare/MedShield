@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedShield | Medicine Reminders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <h2>🛡️ MedShield</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="medical-records.html">📋 Medical Records</a>
+            <a href="prescription.html">💊 Prescriptions</a>
+            <a href="interaction.html">⚠️ Drug Interaction</a>
+            <a href="reminders.html" class="active">⏰ Medicine Reminders</a>
+        </nav>
+
+        <a href="/api/logout" class="logout">🚪 Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Medicine Reminders</h1>
+                <p>Schedule and manage your medicine reminders.</p>
+            </div>
+        </header>
+
+        <section class="record-form">
+
+            <h2>⏰ Set New Reminder</h2>
+
+            <form id="reminderForm">
+
+                <div class="form-group">
+                    <label>Medicine Name</label>
+                    <input type="text" id="reminderMedicine"
+                        placeholder="Enter medicine name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Dosage</label>
+                    <input type="text" id="reminderDosage"
+                        placeholder="Enter dosage" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Reminder Date</label>
+                    <input type="date" id="reminderDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Reminder Time</label>
+                    <input type="time" id="reminderTime" required>
+                </div>
+
+                <button type="submit">Set Reminder</button>
+
+            </form>
+
+        </section>
+
+        <section class="record-list">
+
+            <h2>My Scheduled Reminders</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reminderTable">
+                    <tr>
+                        <td colspan="5">No reminders scheduled yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <div class="medical-warning">
+            <strong>Reminder Notice:</strong>
+            Reminders are only notifications to help users remember
+            their prescribed schedule. Always follow your doctor's instructions.
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
